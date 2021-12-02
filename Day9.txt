@@ -1,0 +1,255 @@
+Example 1:
+
+package Day9;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class Example1 {
+    public static void main(String[] args) {
+        Queue<String> x = new LinkedList<>();
+        x.add("One");
+        x.add("two");
+        x.add("three");
+        x.add("one");
+        System.out.println(x.poll());
+
+    }
+}
+
+
+
+Example 2:
+
+package Day9;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Example2 {
+    public static void main(String[] args) {
+        List<String> list1 = new ArrayList<String>();
+        //List<Object> list2 = list1;
+       // list2.add(new Integer(12));
+        //System.out.println(list2.size());
+    }
+}
+
+
+
+Example 3:
+
+package Day9;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Example3 {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<String>();
+        list.add("one");
+       // list.add(2);
+        System.out.println(list.get(0).length());
+    }
+}
+
+
+Example 4:
+
+package Day9;
+
+import java.util.HashSet;
+
+public class Example4 {
+    public static void main(String[] args) {
+        Integer a = new Integer(4);
+        Integer b = new Integer(8);
+        Integer c = new Integer(4);
+        HashSet hs = new HashSet();
+        hs.add(a);
+        hs.add(b);
+        hs.add(c);
+        System.out.println(hs);
+    }
+}
+
+Example 5:
+
+package Day9;
+
+import java.util.ArrayList;
+
+public class Example5 {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+       list.add(1);
+        list.add(2);
+       list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        System.out.println("Array list  are "+list);
+        ArrayList<Integer> arr2 = new ArrayList<Integer>();
+        list2.add(1);
+        list2.add(2);
+       list2.add(3);
+        list2.add(4);
+        System.out.println("Array list  are "+list);
+      list.removeAll(list2);
+        System.out.println("after removing  "+list);
+    }
+
+}
+
+
+Example 6:
+
+package Day9;
+
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+
+public class Example6 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("giri");
+        list.add("ravi");
+        list.add("dhoni");
+        list.add("vijay");
+        list.add("ajith");
+        list.add("ragz");
+        System.out.println("Before sorting  "+list );
+        Collections.sort(list);
+        System.out.println("After sorting  "+list);
+    }
+}
+
+Example 7:
+
+package Day9;
+
+import java.util.*;
+
+public class Example7 {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("One");
+        list.add("Two");
+        list.add("Three");
+        list.add("Four");
+        list.add("One");
+        list.add("five");
+        System.out.println("Before sorting  "+list );
+        LinkedHashSet<String> hs = new LinkedHashSet<>(list);
+        System.out.println("After sorting  unique values ");
+        for(String strnumber : hs)
+        System.out.println(strnumber);
+    }
+}
+
+Example 8:
+
+package Day9;
+
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Example8 {
+    public static void main(String[] args) {
+        HashMap<String,Integer> map = new HashMap<>();
+        map.put("giri",20);
+        map.put("ragvi",90);
+        map.put("sandi",90);
+        map.put("mathi",80);
+        map.put("vijay",10);
+        map.put("ganesh",50);
+        System.out.println(map);
+        System.out.println("enter the name ");
+        Scanner sc = new Scanner(System.in);
+        String key = sc.next();
+        if (map.containsKey(ved)){
+            Integer a = map.get(ved);
+            System.out.println("value for key  " +key+  " is " +a);
+        }
+        eliste
+        {
+            System.out.println("enter correct one ");
+        }
+    }
+}
+
+
+Example 9:
+
+package Day9;
+import java.util.Date;
+
+public class Example9 {
+    public static void main(String[] args) {
+        Date date = new Date();
+        System.out.println("Todays date is "+date);
+    }
+}
+
+Example 10:
+
+package Day9;
+
+import java.util.*;
+public class Example10 {
+   
+
+        static void findAge(int current_date, int current_month,
+                            int current_year, int birth_date,
+                            int birth_month, int birth_year)
+        {
+            int month[] = { 31, 28, 31, 30, 31, 30, 31,
+                    31, 30, 31, 30, 31 };
+
+
+            if (birth_date > current_date) {
+                current_month = current_month - 1;
+                current_date = current_date + month[birth_month - 1];
+            }
+
+            if (birth_month > current_month) {
+                current_year = current_year - 1;
+                current_month = current_month + 12;
+            }
+
+
+            int calculated_date = current_date - birth_date;
+            int calculated_month = current_month - birth_month;
+            int calculated_year = current_year - birth_year;
+
+
+            System.out.println("Present Age");
+            System.out.println("Years: " + calculated_year +
+                    " Months: " + calculated_month + " Days: " +
+                    calculated_date);
+        }
+        public static void main(String[] args)
+        {  Scanner sc = new Scanner(System.in);
+            System.out.println("Enter current date");
+            int current_date = sc.nextInt();
+            System.out.println("Enter current month");
+            int current_month = sc.nextInt();
+            System.out.println("Enter current year");
+            int current_year = sc.nextInt();
+            System.out.println("enter your birth date");
+            int birth_date = sc.nextInt();
+            System.out.println("enter your birth month");
+            int birth_month = sc.nextInt();
+            System.out.println("enter your birth year");
+            int birth_year = sc.nextInt();
+            findAge(current_date, current_month, current_year,
+                    birth_date, birth_month, birth_year);
+        }
+    }
+
+
+
+
+
